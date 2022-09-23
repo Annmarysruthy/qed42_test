@@ -1,0 +1,39 @@
+# Migration configuration for cities.
+id: city_data
+label: City data
+migration_group: city_data
+migration_dependencies: {}
+
+source:
+  plugin: json_source
+  path: ./cities.json
+  headers:
+    Accept: 'application/json'
+  identifier: upc
+  identifierDepth: 0
+  fields:
+    - _id
+    - city
+    - pop
+    - state
+
+destination:
+  plugin: entity:node
+
+process:
+  type:
+    plugin: default_value
+    default_value: city_data
+
+  field_city_id: _id
+  field_city_name: city
+  field_population: pop
+  field_state_name: state
+
+
+  sticky:
+    plugin: default_value
+    default_value: 0
+  uid:
+    plugin: default_value
+    default_value: 0

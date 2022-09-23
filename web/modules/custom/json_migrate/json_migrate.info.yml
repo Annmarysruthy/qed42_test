@@ -1,0 +1,9 @@
+name: Migrate from JSON files
+description: Custom migration module to import data from JSON files
+package: Migration
+type: module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - drupal:migrate
+  - migrate_plus:migrate_plus
+  - migrate_tools:migrate_tools

@@ -1,0 +1,5 @@
+name: City Data Entity
+type: module
+description: 'Define a Custom City Data entity'
+package: Custom Entity Modules
+core_version_requirement: ^8 || ^9

@@ -25,10 +25,10 @@ process:
     plugin: default_value
     default_value: city_data
 
-  field_city_id: _id
-  field_city_name: city
-  field_population: pop
-  field_state_name: state
+  city_id: _id
+  city_name: city
+  population: pop
+  state: state
 
 
   sticky:
